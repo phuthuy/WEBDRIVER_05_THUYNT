@@ -36,58 +36,58 @@ public class Topic02_Exercise_WebDriver {
 	public void gotoLogin() {
 		driver.findElement(By.xpath("//*[@class='footer']//*[@title='My Account']")).click();
 	}
-//
-//	@Test
-//	public void TestScrip01_VerifyURLandTitle() {
-//		// check title
-//		String homePageTitle = driver.getTitle();
-//		Assert.assertEquals(homePageTitle, "Home page");
-//
-//		// click My Account
-//		gotoLogin();
-//		// click Create an account
-//		driver.findElement(By.xpath("//*[@class='button']//*[contains(text(),'Create')]")).click();
-//		// back man hinh
-//		driver.navigate().back();
-//		// check URL login
-//		String loginUrl = driver.getCurrentUrl();
-//		Assert.assertEquals(loginUrl, "http://live.guru99.com/index.php/customer/account/login/");
-//		// check URL sign up
-//		driver.navigate().forward();
-//		String signupUrl = driver.getCurrentUrl();
-//		Assert.assertEquals(signupUrl, "http://live.guru99.com/index.php/customer/account/create/");
-//
-//	}
-//
-//	@Test
-//	public void TestScript02_LoginEmpty() {
-//		gotoLogin();
-//		driver.findElement(By.id("send2")).click();
-//		String requireMail = driver.findElement(By.id("advice-required-entry-email")).getText();
-//		Assert.assertEquals(requireMail, "This is a required field.");
-//
-//		String requirePass = driver.findElement(By.id("advice-required-entry-pass")).getText();
-//		Assert.assertEquals(requirePass, "This is a required field.");
-//	}
-//
-//	@Test
-//	public void TestScript03_invalidEmail() {
-//		gotoLogin();
-//		driver.findElement(By.id("email")).sendKeys("123434234@12312.123123");
-//		driver.findElement(By.id("send2")).click();
-//		String invalidMail = driver.findElement(By.id("advice-validate-email-email")).getText();
-//		Assert.assertEquals(invalidMail, "Please enter a valid email address. For example johndoe@domain.com.");
-//	}
-//
-//	@Test
-//	public void TestScript04_incorrectPass() {
-//		gotoLogin();
-//		driver.findElement(By.id("email")).sendKeys("automation@gmail.com");
-//		driver.findElement(By.id("pass")).sendKeys("123");
-//		driver.findElement(By.id("send2")).click();
-//		String incorrectPass = driver.findElement(By.id("advice-validate-password-pass")).getText();
-//		Assert.assertEquals(incorrectPass, "Please enter 6 or more characters without leading or trailing spaces.");
-//	}
+
+	@Test
+	public void TestScrip01_VerifyURLandTitle() {
+		// check title
+		String homePageTitle = driver.getTitle();
+		Assert.assertEquals(homePageTitle, "Home page");
+
+		// click My Account
+		gotoLogin();
+		// click Create an account
+		driver.findElement(By.xpath("//*[@class='button']//*[contains(text(),'Create')]")).click();
+		// back man hinh
+		driver.navigate().back();
+		// check URL login
+		String loginUrl = driver.getCurrentUrl();
+		Assert.assertEquals(loginUrl, "http://live.guru99.com/index.php/customer/account/login/");
+		// check URL sign up
+		driver.navigate().forward();
+		String signupUrl = driver.getCurrentUrl();
+		Assert.assertEquals(signupUrl, "http://live.guru99.com/index.php/customer/account/create/");
+
+	}
+
+	@Test
+	public void TestScript02_LoginEmpty() {
+		gotoLogin();
+		driver.findElement(By.id("send2")).click();
+		String requireMail = driver.findElement(By.id("advice-required-entry-email")).getText();
+		Assert.assertEquals(requireMail, "This is a required field.");
+
+		String requirePass = driver.findElement(By.id("advice-required-entry-pass")).getText();
+		Assert.assertEquals(requirePass, "This is a required field.");
+	}
+
+	@Test
+	public void TestScript03_invalidEmail() {
+		gotoLogin();
+		driver.findElement(By.id("email")).sendKeys("123434234@12312.123123");
+		driver.findElement(By.id("send2")).click();
+		String invalidMail = driver.findElement(By.id("advice-validate-email-email")).getText();
+		Assert.assertEquals(invalidMail, "Please enter a valid email address. For example johndoe@domain.com.");
+	}
+
+	@Test
+	public void TestScript04_incorrectPass() {
+		gotoLogin();
+		driver.findElement(By.id("email")).sendKeys("automation@gmail.com");
+		driver.findElement(By.id("pass")).sendKeys("123");
+		driver.findElement(By.id("send2")).click();
+		String incorrectPass = driver.findElement(By.id("advice-validate-password-pass")).getText();
+		Assert.assertEquals(incorrectPass, "Please enter 6 or more characters without leading or trailing spaces.");
+	}
 
 	@Test
 	public void TestScript05_creatAccount() {
