@@ -102,8 +102,8 @@ public class Topic02_Exercise_WebDriver {
 		driver.findElement(By.id("confirmation")).sendKeys("auto1234");
 		driver.findElement(By.xpath("//*[@id='form-validate']//*[@title='Register']")).click();
 		
-		String thank = driver.findElement(By.xpath("//*[contains(text(),'Thank you for registering')]")).getText();
-		Assert.assertEquals(thank, "Thank you for registering with Main Website Store.");
+		String thanks = driver.findElement(By.xpath("//*[contains(text(),'Thank you for registering')]")).getText();
+		Assert.assertEquals(thanks, "Thank you for registering with Main Website Store.");
 		driver.findElement(By.xpath("//*[@id='header']//*[text()='Account']")).click();
 		driver.findElement(By.xpath("//*[@title='Log Out']")).click();
 		
