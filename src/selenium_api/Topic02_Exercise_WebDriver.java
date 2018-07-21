@@ -136,7 +136,7 @@ public class Topic02_Exercise_WebDriver {
 	}
 
     public String getEmail(String suffix,String prefix){
-        int randomNo = (int)(Math.random() * 1000);
+        int randomNo = (int)(Math.random() * 10000);
         return suffix + randomNo + "@" + prefix; 
     }
 
