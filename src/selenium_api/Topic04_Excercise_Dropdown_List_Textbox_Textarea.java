@@ -100,8 +100,6 @@ public class Topic04_Excercise_Dropdown_List_Textbox_Textarea {
 
 		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
 
-		// driver.findElement(By.xpath("//marquee[contains(text(),'Welcome
-		// To')]")).isDisplayed();
 		Assert.assertTrue(driver.findElement(By.xpath("//marquee[contains(text(),'Welcome To')]")).isDisplayed());
 
 		driver.findElement(By.xpath("//a[contains(text(),'New Customer')]")).click();
@@ -138,7 +136,7 @@ public class Topic04_Excercise_Dropdown_List_Textbox_Textarea {
 		
 //		mngr145658 nedejar 30294
 		
-//		Assert.assertEquals(driver.findElement(txt_name).getText(),name);
+		Assert.assertEquals(driver.findElement(txt_name).getAttribute("value"),name);
 		Assert.assertEquals(driver.findElement(txt_add).getText(),Add);
 		
 		String new_city = "Edited City";
