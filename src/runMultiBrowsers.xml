@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Selenium Online 05" parallel="false">
+
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="TestNG.TestNG_Parameter_MultiBrowsers" />
+		</classes>
+	</test>
+	<test name="Run on FireFox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestNG.TestNG_Parameter_MultiBrowsers" />
+		</classes>
+	</test>
+
+</suite>

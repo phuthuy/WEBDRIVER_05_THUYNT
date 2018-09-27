@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Selenium Online 05" parallel="tests" thread-count="2">
+	<test name="Run on FireFox">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="TestNG.TestNG_Parallel"/>
+		</classes>
+	</test>
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="TestNG.TestNG_Parallel"/>
+		</classes>
+	</test>
+
+</suite>
